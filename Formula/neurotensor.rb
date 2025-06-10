@@ -17,6 +17,11 @@ class Neurotensor < Formula
     include.install Dir["include/*"] if File.directory?("include")
   end
 
+  resource "simde" do
+    url "https://github.com/simd-everywhere/simde/archive/refs/tags/v0.8.2.tar.gz"
+    sha256 "fd93f4887f1a0fd72e1fffbf82c57fa324be3fc3927203733f6e0cf697f9a6f4"
+  end
+
   test do
     system "nm", "#{lib}/libneurotensor.a"
   end
