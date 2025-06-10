@@ -6,19 +6,19 @@ class Neurotensor < Formula
 
   if Hardware::CPU.arm?
     url "https://github.com/moldenha/NeuroTensor/releases/download/v0.1.5/neurotensor-macos-arm64-v0.1.5.tar.gz"
-    sha256 "30c56752b4f5ed15585a43c2847ae14a2421480065871351ff713d115d04cea3"
+    sha256 "30dead6cf600cf19f7ca619d44afb452df50251dfded66b33b7d99e9292254d8"
   elsif Hardware::CPU.intel?
     url "https://github.com/moldenha/NeuroTensor/releases/download/v0.1.5/neurotensor-macos-x86_64-v0.1.5.tar.gz"
-    sha256 "b8461f40c72be03dbef5366803c3405ced4d64b09d5a93ae783cfad2bec59dd0"
+    sha256 "e36c56fe7987c741f97f2c7018307564c66df6e99b79cfc25316b610c672215f"
   end
   def install
-    # This installs libneurotensor.dylib into Homebrew’s lib path
-    lib.install "lib/libneurotensor.dylib"
+    # This installs libneurotensor.a into Homebrew’s lib path
+    lib.install "lib/libneurotensor.a"
     include.install Dir["include/*"] if File.directory?("include")
   end
 
   test do
-    system "nm", "#{lib}/libneurotensor.dylib"
+    system "nm", "#{lib}/libneurotensor.a"
   end
 end
 
