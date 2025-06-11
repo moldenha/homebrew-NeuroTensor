@@ -17,7 +17,7 @@ class Neurotensor < Formula
     # This installs libneurotensor.a into Homebrew’s lib path
     lib.install "lib/libneurotensor.a"
     Pathname("include").each_child do |entry|
-      include.install entry unless entry.basename.to_s == "boost" || entry.basename.to_s == "tbb"
+      include.install entry unless entry.basename.to_s == "boost" || entry.basename.to_s == "tbb" || entry.basename.to_s == "oneapi"
       # include.install entry
     end
     # include.install Dir["include/*"] => "neurotensor"
