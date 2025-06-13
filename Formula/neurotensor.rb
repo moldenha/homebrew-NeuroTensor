@@ -9,7 +9,7 @@ class Neurotensor < Formula
     sha256 "30dead6cf600cf19f7ca619d44afb452df50251dfded66b33b7d99e9292254d8"
   elsif Hardware::CPU.intel?
     url "https://github.com/moldenha/NeuroTensor/releases/download/v0.1.5/neurotensor-macos-x86_64-v0.1.5.tar.gz"
-    sha256 "fd239aae829ea846c0bae5028c0a77bb83dc823ddeb435abeeb44d0061039adc"
+    sha256 "be0fd62cea3820df807e3af63ea30ef36ae9d26e2103f3a63468cbbd8b4e2e73"
   end
   
 
